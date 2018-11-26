@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/matchItemHomeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        tools:text="Previous Match"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="@id/matchItemHomeLayout"
+        app:layout_constraintBottom_toTopOf="@id/matchItemVersus"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/matchItemHomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/matchItemHomeClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/matchItemHomeScore"
+            app:layout_constraintRight_toLeftOf="@id/matchItemHomeScore"
+            app:layout_constraintTop_toTopOf="@+id/matchItemHomeScore"
+            tools:text="Liverpool"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/matchItemHomeScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/matchItemVersus"
+            app:layout_constraintRight_toLeftOf="@id/matchItemVersus"
+            app:layout_constraintBottom_toBottomOf="@+id/matchItemVersus"
+            tools:text="3"
+            android:fontFamily="sans-serif-condensed"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/matchItemVersus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/vs"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/matchItemAwayScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/matchItemVersus"
+            app:layout_constraintLeft_toRightOf="@id/matchItemVersus"
+            app:layout_constraintBottom_toBottomOf="@+id/matchItemVersus"
+            tools:text="1"
+            android:fontFamily="sans-serif-condensed"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/matchItemAwayClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/matchItemHomeScore"
+            app:layout_constraintLeft_toRightOf="@id/matchItemAwayScore"
+            app:layout_constraintTop_toTopOf="@+id/matchItemHomeScore"
+            tools:text="Chelsea"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/matchItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matchItemVersus"
+            android:layout_marginTop="16dp"
+            tools:text="Friday, November 23rd, 2018"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/matchItemTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matchItemDate"
+            android:layout_marginTop="8dp"
+            tools:text="21:00"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border"
+            app:layout_constraintTop_toBottomOf="@+id/matchItemTime"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

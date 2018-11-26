@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EPL Schedule</string>
+    <string name="vs">vs</string>
+    <string name="latest_matches">Latest Matches</string>
+    <string name="previous_matches">Previous Matches</string>
+    <string name="next_matches">Next Matches</string>
+    <string name="error_text">Oops..! Something went wrong when trying to retrieve data.</string>
+    <string name="reload">RELOAD</string>
+    <string name="goals">Goals</string>
+    <string name="shots">Shots</string>
+    <string name="goalkeeper">Goalkeeper</string>
+    <string name="detail_activity_title">Match Detail</string>
+    <string name="statistics">Statistics</string>
+    <string name="lineup">Lineup</string>
+    <string name="substitutes">Substitutes</string>
+    <string name="forward">Forward</string>
+    <string name="midfield">Midfield</string>
+    <string name="defense">Defense</string>
+</resources>
