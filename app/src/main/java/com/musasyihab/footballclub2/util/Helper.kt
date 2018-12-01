@@ -1,6 +1,7 @@
 package com.musasyihab.footballclub2.util
 
 import com.musasyihab.footballclub2.model.EventModel
+import com.musasyihab.footballclub2.model.FavoriteModel
 import java.text.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -70,5 +71,18 @@ object Helper {
         if(event == null) return false
         val result = !event.intHomeScore.isNullOrEmpty()
         return !event.intHomeScore.isNullOrEmpty()
+    }
+
+    fun convertFavoriteToEvent(favorite: FavoriteModel): EventModel {
+        val event = EventModel(favorite.idEvent, "", favorite.strEvent,
+            "", "", "", "", "", "",
+            favorite.strHomeTeam, favorite.strAwayTeam, favorite.intHomeScore, "", favorite.intAwayScore,
+            "", "", "", "", "", "",
+            "", "", "", "", "", "",
+            "", "", "", "", "", "",
+            "", "", "", favorite.dateEvent, "", favorite.strTime, "",
+            favorite.idHomeTeam, favorite.idAwayTeam, "", "", "", "", "", "",
+            "", "", "", "")
+        return event
     }
 }

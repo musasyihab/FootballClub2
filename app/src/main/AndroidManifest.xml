@@ -29,6 +29,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.list.MatchListActivity"/>
         </activity>
+
+        <activity
+            android:label="@string/favorite_activity_title"
+            android:name=".ui.favorite.FavoriteActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.list.MatchListActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.list.MatchListActivity"/>
+        </activity>
     </application>
 
 </manifest>

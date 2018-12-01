@@ -1,6 +1,8 @@
 package com.musasyihab.footballclub2.ui.detail
 
+import android.database.sqlite.SQLiteConstraintException
 import com.musasyihab.footballclub2.api.ApiServiceInterface
+import com.musasyihab.footballclub2.database.DBHelper
 import com.musasyihab.footballclub2.model.EventModel
 import com.musasyihab.footballclub2.model.MatchListModel
 import com.musasyihab.footballclub2.model.TeamListModel
@@ -77,4 +79,35 @@ class MatchDetailPresenter: MatchDetailContract.Presenter {
         subscriptions.add(subscribe)
     }
 
+    override fun addToFavorite(db: DBHelper, event: EventModel?) {
+        try {
+            if (event != null) {
+                db?.addToFavoriteList(event)
+                view.showSnackbar("Favorite Added")
+                view.setupMenu()
+            }
+        } catch (e: SQLiteConstraintException){
+            view.showSnackbar("Something went wrong, please try again later.")
+        }
+    }
+
+    override fun removeFromFavorite(db: DBHelper, id: String) {
+        try {
+            db.deleteFromFavoriteList(id)
+            view.showSnackbar("Favorite Removed")
+            view.setupMenu()
+        } catch (e: SQLiteConstraintException){
+            view.showSnackbar("Something went wrong, please try again later.")
+        }
+    }
+
+    override fun getFavoriteState(db: DBHelper, id: String): Boolean {
+        var isFavorite = false
+        try {
+            isFavorite = db.getFavoriteById(id) != null
+        } catch (e: SQLiteConstraintException){
+            e.printStackTrace()
+        }
+        return isFavorite
+    }
 }

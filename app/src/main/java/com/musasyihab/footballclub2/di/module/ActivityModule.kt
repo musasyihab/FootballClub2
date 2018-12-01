@@ -3,6 +3,8 @@ package com.musasyihab.footballclub2.di.module
 import android.app.Activity
 import com.musasyihab.footballclub2.ui.detail.MatchDetailContract
 import com.musasyihab.footballclub2.ui.detail.MatchDetailPresenter
+import com.musasyihab.footballclub2.ui.favorite.FavoriteContract
+import com.musasyihab.footballclub2.ui.favorite.FavoritePresenter
 import com.musasyihab.footballclub2.ui.list.MatchListContract
 import com.musasyihab.footballclub2.ui.list.MatchListPresenter
 import dagger.Module
@@ -25,11 +27,11 @@ class ActivityModule(private var activity: Activity) {
     fun provideMatchDetailPresenter(): MatchDetailContract.Presenter {
         return MatchDetailPresenter()
     }
-//
-//    @Provides
-//    fun provideStartPresenter(): StartContract.Presenter {
-//        return StartPresenter()
-//    }
+
+    @Provides
+    fun provideFavoritePresenter(): FavoriteContract.Presenter {
+        return FavoritePresenter()
+    }
 
 
 }

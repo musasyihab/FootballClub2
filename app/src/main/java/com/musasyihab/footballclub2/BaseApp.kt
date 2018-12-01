@@ -18,7 +18,7 @@ class BaseApp: Application() {
         setup()
 
         if (BuildConfig.DEBUG) {
-            // Maybe TimberPlant etc.
+            // Add custom configuration for debug build
         }
     }
 

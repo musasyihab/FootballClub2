@@ -10,10 +10,12 @@
     <string name="shots">Shots</string>
     <string name="goalkeeper">Goalkeeper</string>
     <string name="detail_activity_title">Match Detail</string>
+    <string name="favorite_activity_title">Favorite Match</string>
     <string name="statistics">Statistics</string>
     <string name="lineup">Lineup</string>
     <string name="substitutes">Substitutes</string>
     <string name="forward">Forward</string>
     <string name="midfield">Midfield</string>
     <string name="defense">Defense</string>
+    <string name="favorites">Add To Favorite</string>
 </resources>
